@@ -35,4 +35,17 @@ public class Flight {
             }
         }
     }
+
+    private static void ReserveTicket(){
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter Seat number: ");
+        int seatNum = sc.nextInt();
+
+        if(seats[seatNum-1] == false){
+            seats[seatNum-1] = true;
+            System.out.println("Seat Reserved, Thank you.");
+        }else {
+            System.out.println("Sorry, Already Reserved Seat");
+        }
+    }
 }
